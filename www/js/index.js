@@ -16,10 +16,26 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-function initialize(){
-    document.addEventListener('deviceready', function(){
+function initialize() {
+    document.addEventListener('deviceready', function() {
 
-        alert("Device is Ready");
+        retrieveData("https://coderbits.com/brianborge.json");
 
     }, false);
+}
+
+
+function retrieveData(url) {
+    var request = new XMLHttpRequest();
+
+    request.onload = function() {
+        if (request.readyState === 4 && request.status === 200) {
+            alert(request.responseText);
+        } else {
+            alert(request.statusText);
+        }
+    };
+    
+    request.open("get", url, true);
+    request.send();
 }
