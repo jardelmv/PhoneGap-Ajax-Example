@@ -30,9 +30,9 @@ function retrieveData(url) {
 
     request.onload = function() {
         if (request.readyState === 4 && request.status === 200) {
-            alert(request.responseText);
+            alert("opa " + request.responseText);
         } else {
-            alert(request.statusText);
+            alert("epa " + request.statusText);
         }
     };
     
