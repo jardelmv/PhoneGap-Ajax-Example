@@ -19,7 +19,8 @@
 function initialize() {
     document.addEventListener('deviceready', function() {
 
-        retrieveData("http://joee.com.br/index.html");
+        //retrieveData("http://joee.com.br/index.html");
+        retrieveData("http://54.207.66.247:5984/codecouros");
 
     }, false);
 }
